@@ -1,0 +1,4 @@
+This can be done without creating the stack, by using a balance variable that  checks whether at each point the sum of wild cards and opening braces is greater than closing ones, and upon right to left traversal, the sum of closing ones and the wild cards are greater than the opening ones.
+
+
+A sort of BIzarre one but great one to brainstorm. Most intuitive approach fro this was using stack, but for a most optimal approach specifically for the space optimization, we have to look ahead for this crooked approach. 
