@@ -4,32 +4,15 @@ public:
         vector<int> result;
 
         int n = A.size();
-        unordered_set<int> a;
-        int count = 0;
+        set<int> a,b;
+        
         for (int i = 0; i < n; i++) {
-
-            if (a.find(A[i]) != a.end()) {
-                if (a.find(B[i]) != a.end()) {
-                    count++;
-                } else
-                    a.insert(B[i]);
-
-                count++;
-            }
-
-            else if (A[i] == B[i]) {
-                count++;
-            } else if (a.find(B[i]) != a.end()) {
-                if (a.find(A[i]) != a.end()) {
-                    count++;
-                } else
-                    a.insert(A[i]);
-
-                count++;
-            } else {
-                a.insert(A[i]);
-                a.insert(B[i]);
-            }
+            int count = 0;
+            //Two set Approach:
+            a.insert(A[i]); b.insert(B[i]);
+           for(auto&i: a){
+                if(b.count(i)) count++;
+           }
 
             result.push_back(count);
         }
