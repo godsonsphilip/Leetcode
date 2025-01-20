@@ -4,9 +4,8 @@ public:
         int n = nums.size();
         k = k%n;
         if(k==0) return;
-        vector<int> sample;
-        sample.insert(sample.end(), nums.begin() + (n-k), nums.end());
-        sample.insert(sample.end(), nums.begin(), nums.begin() + n - k);
-        nums = sample;
+        reverse(nums.begin(), nums.end());
+        reverse(nums.begin(), nums.begin()+k);
+        reverse(nums.begin()+k, nums.end());
     }
 };
