@@ -25,12 +25,12 @@ public:
 
 
             //Defining the neighbours:
-            vector<int> dx = {-1,1,0,0};
-            vector<int> dy = {0,0,1,-1};
-
+            
+    vector<pair<int, int>> neighbour = {{r, c+1}, {r,c-1}, {r+1, c}, {r-1,c}};
             for(int i = 0; i<4; i++){
-               
-                  int row = r+dx[i], col = c+dy[i];
+                    int row = neighbour[i].first;
+                    int col = neighbour[i].second;
+                 
                   if(row==m || col ==n || row<0 || col<0 || result[row][col]!=-1) continue;
                   result[row][col] = h+1;
                   q.push(make_pair(row,col));
