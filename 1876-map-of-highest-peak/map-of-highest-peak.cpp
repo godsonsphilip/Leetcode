@@ -5,6 +5,7 @@ public:
 
         // Initial Condition:
         vector<vector<int>> result(m, vector<int>(n,-1));
+        
 
         queue<pair<int, int>> q;
         for(int i = 0; i<m; i++){
@@ -12,6 +13,7 @@ public:
                 if(isWater[i][j]==1){
                     q.push({i,j});
                     result[i][j] = 0;
+                   
                 }
             }
         }
@@ -20,7 +22,7 @@ public:
             auto [r,c] = q.front();
             q.pop();
             int h = result[r][c];
-           
+
 
             //Defining the neighbours:
             vector<int> dx = {-1,1,0,0};
