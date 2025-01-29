@@ -1,31 +1,38 @@
 class Solution {
 public:
+
     int find(int a, vector<int>& par) {
-        return par[a] == a ? a : (par[a] = find(par[a], par));
+        if (a != par[a]) par[a] = find(par[a], par);
+        return par[a];
     }
 
     bool Union(int a, int b, vector<int>& par, vector<int>& rank) {
         int pa = find(a, par), pb = find(b, par);
         if (pa == pb) return false;
-        
-        if (rank[pa] > rank[pb]) par[pb] = pa;
-        else if (rank[pa] < rank[pb]) par[pa] = pb;
-        else { 
+
+        if (rank[pa] > rank[pb]) {
             par[pb] = pa;
-            rank[pa]++;
+            rank[pa] += rank[pb];
+        } else {
+            par[pa] = pb;
+            rank[pb] += rank[pa];
         }
         return true;
     }
 
     vector<int> findRedundantConnection(vector<vector<int>>& edges) {
         int n = edges.size();
-        vector<int> par(n + 1), rank(n + 1, 0);
-        iota(par.begin(), par.end(), 0);
+        vector<int> parent(n + 1), rank(n + 1, 1);
+        for (int i = 0; i <= n; i++) parent[i] = i;
 
-        for (auto& e : edges) {
-            if (!Union(e[0], e[1], par, rank))
-                return e;
+        vector<int> result;
+        for (int i = 0; i < n; i++) {
+            if (!Union(edges[i][0], edges[i][1], parent, rank)) {
+                result.push_back(edges[i][0]);
+                result.push_back(edges[i][1]);
+                break;
+            }
         }
-        return {};
+        return result;
     }
 };
