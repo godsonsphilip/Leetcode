@@ -12,15 +12,13 @@ public:
             }
             top++;
 
-            
-
             //Moving down:
             for(int i = top; i<bottom; i++){
                 result.push_back(matrix[i][right-1]);
             }
             right--;
 
-            if(top>=bottom || left>=right) break;
+            if(top>=bottom || left>=right) break; //Applying this condition for the edge case of a row vector or a column vector
 
             //Moving left:
             for(int i = right-1; i>=left; i--){
