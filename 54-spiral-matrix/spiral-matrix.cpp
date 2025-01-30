@@ -12,7 +12,7 @@ public:
             }
             top++;
 
-            if(top>=bottom || left>=right) break;
+            
 
             //Moving down:
             for(int i = top; i<bottom; i++){
@@ -27,8 +27,6 @@ public:
                 result.push_back(matrix[bottom-1][i]);
             }
             bottom--;
-
-            if(top>=bottom || left>=right) break;
 
             //Moving up:
             for(int i = bottom-1; i>=top; i--){
