@@ -8,16 +8,20 @@ public:
             vector<int> row;
             vector<int> prev = result.back();
             
-            // First element is always 1
-            row.push_back(1);
+           
+            vector<int> temp;
+            temp.push_back(0);
+            for(int j =0; j<prev.size(); j++)
+            temp.push_back(prev[j]);
+            temp.push_back(0);
             
             // Compute middle elements
-            for (int j = 1; j < prev.size(); j++) {
-                row.push_back(prev[j - 1] + prev[j]);
+            for (int j = 0; j < prev.size()+1; j++) {
+                row.push_back(temp[j] + temp[j+1]);
             }
             
-            // Last element is always 1
-            row.push_back(1);
+           
+            
             
             result.push_back(row);
         }
