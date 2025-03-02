@@ -3,7 +3,7 @@ public:
     vector<vector<int>> mergeArrays(vector<vector<int>>& nums1,
                                     vector<vector<int>>& nums2) {
         vector<vector<int>> result;
-        unordered_map<int, int> myMap;
+        map<int, int> myMap;
         for (auto& i : nums1) {
             myMap[i[0]] += i[1];
         }
@@ -15,7 +15,7 @@ public:
             int b = i.second;
             result.push_back({a, b});
         }
-        sort(result.begin(), result.end());
+       
         return result;
     }
 };
