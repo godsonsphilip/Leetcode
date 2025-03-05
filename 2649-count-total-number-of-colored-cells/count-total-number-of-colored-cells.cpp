@@ -2,6 +2,13 @@
 class Solution {
 public:
     long long coloredCells(int n) {
-        return 1 + 2LL * n * (n - 1);  // ✅ Ensures long long calculation
+       ll result = 1;
+       ll i = 1;
+       while(n-1!=0) {
+            result += 4LL*i;
+            i++;
+            n--;
+       }
+       return result;
     }
 };
