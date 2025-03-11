@@ -1,6 +1,7 @@
 class Solution {
 public:
     int numberOfSubstrings(string s) {
+        //Sliding Window technique:
        int count = 0;
        int a = 0, b = 0, c = 0;
        int n = s.size();
