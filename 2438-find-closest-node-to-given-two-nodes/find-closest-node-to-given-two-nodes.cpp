@@ -2,7 +2,7 @@ class Solution {
 public:
     int closestMeetingNode(vector<int>& edges, int node1, int node2) {
         int V = edges.size();
-        vector<int> dist1(V,INT_MAX), dist2(V, INT_MAX);
+        vector<int> dist1(V,numeric_limits<int>::max()), dist2(V, numeric_limits<int>::max());
         bfs(edges, node1, dist1);
         bfs(edges, node2, dist2);
 
@@ -11,7 +11,7 @@ public:
             temp[i] = max(dist1[i], dist2[i]);
         }
 
-        int result = -1, mini = INT_MAX;
+        int result = -1, mini = numeric_limits<int>::max();
         for(int i = 0; i<V; i++){
             if(mini>temp[i]){
                 mini = temp[i];
