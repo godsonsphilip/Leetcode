@@ -6,7 +6,7 @@ public:
         int ans = 0;
         vector<int> a(n+1, 1);
         for(int i = 1; i<n+1; i++){
-            a[i] = (2*a[i-1]) % mod;
+            a[i] = (a[i-1] << 1) % mod;
         }
        if(!is_sorted(nums.begin(), nums.end())){ sort(nums.begin(), nums.end());}
         int l = 0, r = n-1;
