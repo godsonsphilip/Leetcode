@@ -8,7 +8,7 @@ public:
         for(int i = 1; i<n+1; i++){
             a[i] = (2*a[i-1]) % mod;
         }
-        sort(nums.begin(), nums.end());
+       if(!is_sorted(nums.begin(), nums.end())){ sort(nums.begin(), nums.end());}
         int l = 0, r = n-1;
         while(l<=r){
             if(nums[r]+nums[l] <= target){
