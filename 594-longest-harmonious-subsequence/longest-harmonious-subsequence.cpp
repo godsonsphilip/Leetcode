@@ -2,16 +2,17 @@ class Solution {
 public:
     int findLHS(vector<int>& nums) {
         int n = nums.size();
-        int maxi = 0;
-       
-        unordered_map<int, int> myMap;
-        for(auto& i: nums) myMap[i]++;
-        for(auto& [key, val]: myMap){
-            if(myMap.count(key+1)!=0){
-                maxi = max(maxi, val + myMap[key+1]);
-            }
+        int maxi = 0, length = 0;
+
+        if (!is_sorted(nums.begin(), nums.end()))
+            sort(nums.begin(), nums.end());
+        int i = 0, j = 0;
+        while(j<n){
+            if(nums[j]-nums[i] == 1) maxi = max(maxi, j-i+1);
+            while(nums[j]-nums[i]>1) i++;
+            j++;
         }
-        
+
         return maxi;
     }
 };
