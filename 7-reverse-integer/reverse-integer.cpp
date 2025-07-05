@@ -1,14 +1,14 @@
 class Solution {
 public:
+    #define ll long long 
     int reverse(int x) {
-        long result = 0;
-        while(x!=0){
-            int i = x%10;
-            result = result*10 + i;
-            x /= 10;
-            if(result>=INT_MAX) return 0;
-            if(result<=INT_MIN) return 0;
-        }
-        return result;
+        bool neg = x<0;
+        string temp = to_string(abs((ll)x));
+       std::reverse(temp.begin(), temp.end());
+        if(stoll(temp)>numeric_limits<int>::max() or stoll(temp)< numeric_limits<int>::min()) return 0;
+        int p = stoi(temp);
+        if(neg) p = -p;
+        return p;
+        
     }
 };
