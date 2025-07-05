@@ -1,42 +1,39 @@
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
-        vector<vector<int>> result;
-         // Set to track unique triplets
         int n = nums.size();
+        vector<vector<int>> result;
         sort(nums.begin(), nums.end());
-        for(int i = 0; i<n; i++){
-            if(i!=0 && nums[i]==nums[i-1]) continue;
-            int l = i+1;
-            int r = n-1;
-            int val = nums[i];
-            while(l<r){
-                if((l!=i+1 && nums[l]==nums[l-1] )) {
-                    l++;
-                    continue;}
-
-                if( (r!=n-1 && nums[r]==nums[r+1])) {
-                    r--;
-                    continue;
-                }
-                vector<int> s;
-                if(nums[l]+nums[r]==(-val)) {
-                    s = {val,nums[l],nums[r]};
-                    result.push_back(s);
-                    l++;
-                    continue;
-                }
-
-                if(nums[l]+nums[r]>(-val)){
-                    r--;
-                    continue;
-                }
-
-                l++;
-
+        int i = 0;
+        while(i<n){
+            if(i!=0 and nums[i]==nums[i-1]){
+                i++;
+                continue;
             }
+            int left = i+1, right = n-1;
+            int val = nums[i];
+            while(left<right){
+                if(left!=i+1 and nums[left]==nums[left-1]){
+                    left++;
+                    continue;
+                }
+                if(right!=n-1 and nums[right]==nums[right+1]){
+                    right--;
+                    continue;
+                }
+                if(nums[left]+nums[right]==-val){
+                    result.push_back({val, nums[left], nums[right]});
+                    left++;
+                    continue;
+                }
+                if(nums[left] + nums[right] > -val){
+                    right--;
+                    continue;
+                }
+                left++;
+            }
+            i++;
         }
-        
         return result;
     }
 };
