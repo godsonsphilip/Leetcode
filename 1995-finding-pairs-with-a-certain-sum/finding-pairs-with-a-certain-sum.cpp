@@ -15,19 +15,14 @@ public:
         myMap[n2[index]]++; // add new value to map
     }
 
-    int count(int tot) {
-        int n = n1.size();
-        int ans = 0;
-        for (int i = 0; i < n; i++) {
-            int val = tot - n1[i];
-            auto it = myMap.find(val);
-            if (it != myMap.end())
-                ans += myMap[val];
-            else
-                continue;
-        }
-        return ans;
+   int count(int tot) {
+    int ans = 0;
+    for (int num : n1) {
+        ans += myMap[tot - num];
     }
+    return ans;
+}
+
 };
 
 /**
