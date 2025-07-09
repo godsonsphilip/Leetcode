@@ -8,7 +8,7 @@ public:
         for(int i = 0; i<n; i++){
             m.emplace_back(startTime[i], endTime[i]);
         }
-        sort(m.begin(), m.end());
+        
         vector<int> gaps(n+1,0);
         for(int i = 0; i<n; i++){
             if(i==0){
