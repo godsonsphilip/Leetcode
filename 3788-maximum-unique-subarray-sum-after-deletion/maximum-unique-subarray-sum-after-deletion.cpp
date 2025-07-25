@@ -1,12 +1,14 @@
 class Solution {
 public:
     int maxSum(vector<int>& nums) {
-        
-        unordered_set<int> positives;
-        for(int n: nums){
-            if(n>0) positives.emplace(n);
+        int n = nums.size();
+        int sum = 0;
+        unordered_map<int, int> myMap;
+        sort(nums.begin(), nums.end()); if(nums[n-1]<0) return nums[n-1];
+        for(auto& i: nums) myMap[i]++;
+        for(auto& pair: myMap){
+            if(pair.first>=0) sum += pair.first;
         }
-        if(positives.empty()) return *max_element(nums.begin(), nums.end());
-        return accumulate(positives.begin(), positives.end(), 0LL);
+        return sum;
     }
 };
