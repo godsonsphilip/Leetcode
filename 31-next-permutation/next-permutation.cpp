@@ -1,31 +1,38 @@
 class Solution {
 public:
     void nextPermutation(vector<int>& nums) {
-        int n = nums.size();
-        int ind = -1;
+        // Optimal Approach: 
 
-        //Finding the Breakpoint for the longest-Prefix Match:
-        for(int i = n-2; i>=0; i--){
-            if(nums[i]<nums[i+1]){
-                ind = i;
-                break;
-            }
-        }
+        // int n = nums.size();
+        // int ind = -1;
 
-        if(ind==-1){
-            reverse(nums.begin(), nums.end());
-            // for(auto& i: nums) cout<<i<<" ";
-            return;
-        }
+        // //Finding the Breakpoint for the longest-Prefix Match:
+        // for(int i = n-2; i>=0; i--){
+        //     if(nums[i]<nums[i+1]){
+        //         ind = i;
+        //         break;
+        //     }
+        // }
 
-        for(int i = n-1; i>ind; i--){
-            if(nums[i]>nums[ind]){
-                swap(nums[i], nums[ind]);
-                break;
-            }
-        }
+        // if(ind==-1){
+        //     reverse(nums.begin(), nums.end());
+        //     // for(auto& i: nums) cout<<i<<" ";
+        //     return;
+        // }
 
-        sort(nums.begin()+ind+1, nums.end());
+        // for(int i = n-1; i>ind; i--){
+        //     if(nums[i]>nums[ind]){
+        //         swap(nums[i], nums[ind]);
+        //         break;
+        //     }
+        // }
+
+        // sort(nums.begin()+ind+1, nums.end());
+
+
+        //Using STL:
+        next_permutation(nums.begin(), nums.end());
+        return;
         
     }
 };
