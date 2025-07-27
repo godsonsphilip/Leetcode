@@ -3,27 +3,17 @@ public:
     int countHillValley(vector<int>& nums) {
         int n = nums.size();
         int count = 0;
-        int i = 0, j = 1;
-        while(i<j and j<n){
-            if(i==0 || i==n-1){
-                i++;
-                j++;
-                continue;
+        vector<int> a;
+        for(auto& i: nums){
+            if(a.empty() or a.back()!=i){
+                a.push_back(i);
             }
-            while(j<n and nums[i]==nums[j]){
-                j++;
-            }   
-            if(j<n){if(nums[i] > nums[i-1] and nums[i] > nums[j] ){
-                count++;
-                cout<<nums[i]<<" ";
-            }
-            if(nums[i] < nums[i-1] and nums[i] < nums[j]){
-                count++;
-                cout<<nums[i]<<" ";
-            }
-            i = j;
-            j++;}
+        }
 
+        for(int i = 1; i<a.size()-1; i++){
+            if(a[i]>a[i-1] and a[i] > a[i+1]) count++;
+            else if(a[i]<a[i-1] and a[i]<a[i+1]) count++;
+            
         }
         return count;
     }
