@@ -37,7 +37,6 @@ public:
                 count = 0;
             }
         }
-        ans += count/k;
         return ans;
     }
 };
