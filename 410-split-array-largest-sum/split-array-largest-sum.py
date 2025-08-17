@@ -19,10 +19,11 @@ class Solution:
         ans = high
         while low<=high:
             mid = low + (high-low)//2
-            if feasible(mid) > k :
-                low = mid + 1
+            if feasible(mid) <= k :
+                high = mid - 1
+                ans = mid
                 continue
             
-            high = mid - 1
+            low = mid + 1
         
-        return low
+        return ans
