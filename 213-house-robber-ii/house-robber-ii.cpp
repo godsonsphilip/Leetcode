@@ -15,6 +15,21 @@ public:
         return dp[index] = max(left, right);
     }
 
+    //Bottom-up Approach:
+    int solve1(vector<int>& nums, int index){
+        int n = nums.size();
+        int prev = nums[0], prev1 = 0, curr = 0;
+        for(int i = 1; i<n; i++){
+            int pick = nums[index] + prev1;
+            int notpick = prev;
+
+            prev1 = prev;
+            prev = pick;
+            curr = max(pick, notpick);
+        }
+        return curr;
+    }
+
     int rob(vector<int>& nums) {
         int n = nums.size();
         if(n==1) return nums[0];
