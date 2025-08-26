@@ -16,16 +16,17 @@ public:
     }
 
     //Bottom-up Approach:
-    int solve1(vector<int>& nums, int index){
+    int solve1(vector<int>& nums){
         int n = nums.size();
-        int prev = nums[0], prev1 = 0, curr = 0;
+        int prev = nums[0], prev1 = 0, curr = prev;
         for(int i = 1; i<n; i++){
-            int pick = nums[index] + prev1;
+            int pick = nums[i] + prev1;
             int notpick = prev;
+            curr = max(pick, notpick);
 
             prev1 = prev;
-            prev = pick;
-            curr = max(pick, notpick);
+            prev = curr;
+            
         }
         return curr;
     }
@@ -39,6 +40,6 @@ public:
             if(i!=n-1) nums2.push_back(nums[i]);
         }
 
-        return max(solve(dp1, nums1, nums1.size()-1), solve(dp2, nums2, nums2.size()-1));
+        return max(solve1(nums1), solve1(nums2));
     }
 };
