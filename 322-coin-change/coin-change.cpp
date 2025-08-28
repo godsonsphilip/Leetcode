@@ -9,8 +9,8 @@ public:
     }
 
     int solve(vector<vector<int>>& dp, vector<int>& coins, int target, int index){
-        if(index<0){
-            if(target==0) return 0;
+        if(index==0){
+            if(target % coins[0] ==0) return target/coins[0];
             return INT_MAX;
         }
         if(dp[index][target]!=-1) return dp[index][target];
