@@ -1,30 +1,22 @@
 class Solution {
 public:
-    vector<string> generateParenthesis(int n) {
-        vector<string> result;
-        string sample = "";
-        backtrack(result, sample, 0, 0, n);
-        return result;
-    }
-
-private:
-    void backtrack(vector<string>& result, string& sample, int open, int close, int n) {
-        // Base Condition:
-        if (open == n && close == n) {
-            result.push_back(sample);
+    void backtrack(vector<string>& r, int n, int open, int closed, const string& a){
+        if(open==closed and closed == n){
+            r.push_back(a);
             return;
         }
 
-        if (open < n) {
-            sample += '(';
-            backtrack(result, sample, open + 1, close, n);
-            sample.pop_back(); // Remove the last character added
+        if(closed<open){
+            backtrack(r, n, open, closed+1, a+')');
         }
 
-        if (close < open) {
-            sample += ')';
-            backtrack(result, sample, open, close + 1, n);
-            sample.pop_back(); // Remove the last character added
-        }
+        if(open<n)
+        backtrack(r, n, open+1, closed, a+'(');
+    }
+    vector<string> generateParenthesis(int n) {
+        vector<string> result;
+        string a = "";
+        backtrack(result, n, 0, 0, a);
+        return result;
     }
 };
