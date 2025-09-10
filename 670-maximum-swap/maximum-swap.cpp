@@ -11,13 +11,17 @@ public:
         }
 
         //Try to swap for each digit with the largest digit from right extreme:
+        bool key = false;
         for(int i = 0; i<n; i++){
             for(int j = 9; j>a[i]-'0'; j--){
                 if(digits[j] > i){
                     swap(a[i], a[digits[j]]);
-                    return stoi(a);
+                    key = true;
+                    break;
                 }
             }
+            if(key) break;
+
         }
         return stoi(a);
     }
