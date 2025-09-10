@@ -19,6 +19,6 @@ public:
                 }
             }
         }
-        return num;
+        return stoi(a);
     }
 };
