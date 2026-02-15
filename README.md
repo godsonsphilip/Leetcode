@@ -24,6 +24,7 @@
 |  |
 | ------- |
 | [0960-delete-columns-to-make-sorted-iii](https://github.com/godsonsphilip/Leetcode/tree/master/0960-delete-columns-to-make-sorted-iii) |
+| [2571-minimum-operations-to-reduce-an-integer-to-0](https://github.com/godsonsphilip/Leetcode/tree/master/2571-minimum-operations-to-reduce-an-integer-to-0) |
 ## Math
 |  |
 | ------- |
@@ -32,8 +33,13 @@
 |  |
 | ------- |
 | [0067-add-binary](https://github.com/godsonsphilip/Leetcode/tree/master/0067-add-binary) |
+| [2571-minimum-operations-to-reduce-an-integer-to-0](https://github.com/godsonsphilip/Leetcode/tree/master/2571-minimum-operations-to-reduce-an-integer-to-0) |
 ## Simulation
 |  |
 | ------- |
 | [0067-add-binary](https://github.com/godsonsphilip/Leetcode/tree/master/0067-add-binary) |
+## Greedy
+|  |
+| ------- |
+| [2571-minimum-operations-to-reduce-an-integer-to-0](https://github.com/godsonsphilip/Leetcode/tree/master/2571-minimum-operations-to-reduce-an-integer-to-0) |
 <!---LeetCode Topics End-->
