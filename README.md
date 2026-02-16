@@ -33,6 +33,7 @@
 |  |
 | ------- |
 | [0067-add-binary](https://github.com/godsonsphilip/Leetcode/tree/master/0067-add-binary) |
+| [0190-reverse-bits](https://github.com/godsonsphilip/Leetcode/tree/master/0190-reverse-bits) |
 | [2571-minimum-operations-to-reduce-an-integer-to-0](https://github.com/godsonsphilip/Leetcode/tree/master/2571-minimum-operations-to-reduce-an-integer-to-0) |
 ## Simulation
 |  |
@@ -42,4 +43,8 @@
 |  |
 | ------- |
 | [2571-minimum-operations-to-reduce-an-integer-to-0](https://github.com/godsonsphilip/Leetcode/tree/master/2571-minimum-operations-to-reduce-an-integer-to-0) |
+## Divide and Conquer
+|  |
+| ------- |
+| [0190-reverse-bits](https://github.com/godsonsphilip/Leetcode/tree/master/0190-reverse-bits) |
 <!---LeetCode Topics End-->
