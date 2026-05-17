@@ -4,6 +4,7 @@
 ## Array
 |  |
 | ------- |
+| [0033-search-in-rotated-sorted-array](https://github.com/godsonsphilip/Leetcode/tree/master/0033-search-in-rotated-sorted-array) |
 | [0960-delete-columns-to-make-sorted-iii](https://github.com/godsonsphilip/Leetcode/tree/master/0960-delete-columns-to-make-sorted-iii) |
 | [3606-coupon-code-validator](https://github.com/godsonsphilip/Leetcode/tree/master/3606-coupon-code-validator) |
 | [3655-xor-after-range-multiplication-queries-ii](https://github.com/godsonsphilip/Leetcode/tree/master/3655-xor-after-range-multiplication-queries-ii) |
@@ -51,4 +52,8 @@
 | ------- |
 | [0190-reverse-bits](https://github.com/godsonsphilip/Leetcode/tree/master/0190-reverse-bits) |
 | [3655-xor-after-range-multiplication-queries-ii](https://github.com/godsonsphilip/Leetcode/tree/master/3655-xor-after-range-multiplication-queries-ii) |
+## Binary Search
+|  |
+| ------- |
+| [0033-search-in-rotated-sorted-array](https://github.com/godsonsphilip/Leetcode/tree/master/0033-search-in-rotated-sorted-array) |
 <!---LeetCode Topics End-->
