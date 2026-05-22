@@ -6,12 +6,14 @@
 | ------- |
 | [0031-next-permutation](https://github.com/godsonsphilip/Leetcode/tree/master/0031-next-permutation) |
 | [0033-search-in-rotated-sorted-array](https://github.com/godsonsphilip/Leetcode/tree/master/0033-search-in-rotated-sorted-array) |
+| [0128-longest-consecutive-sequence](https://github.com/godsonsphilip/Leetcode/tree/master/0128-longest-consecutive-sequence) |
 | [0960-delete-columns-to-make-sorted-iii](https://github.com/godsonsphilip/Leetcode/tree/master/0960-delete-columns-to-make-sorted-iii) |
 | [3606-coupon-code-validator](https://github.com/godsonsphilip/Leetcode/tree/master/3606-coupon-code-validator) |
 | [3655-xor-after-range-multiplication-queries-ii](https://github.com/godsonsphilip/Leetcode/tree/master/3655-xor-after-range-multiplication-queries-ii) |
 ## Hash Table
 |  |
 | ------- |
+| [0128-longest-consecutive-sequence](https://github.com/godsonsphilip/Leetcode/tree/master/0128-longest-consecutive-sequence) |
 | [3606-coupon-code-validator](https://github.com/godsonsphilip/Leetcode/tree/master/3606-coupon-code-validator) |
 ## String
 |  |
@@ -61,4 +63,8 @@
 |  |
 | ------- |
 | [0031-next-permutation](https://github.com/godsonsphilip/Leetcode/tree/master/0031-next-permutation) |
+## Union-Find
+|  |
+| ------- |
+| [0128-longest-consecutive-sequence](https://github.com/godsonsphilip/Leetcode/tree/master/0128-longest-consecutive-sequence) |
 <!---LeetCode Topics End-->
