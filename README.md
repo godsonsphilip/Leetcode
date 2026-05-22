@@ -4,6 +4,7 @@
 ## Array
 |  |
 | ------- |
+| [0031-next-permutation](https://github.com/godsonsphilip/Leetcode/tree/master/0031-next-permutation) |
 | [0033-search-in-rotated-sorted-array](https://github.com/godsonsphilip/Leetcode/tree/master/0033-search-in-rotated-sorted-array) |
 | [0960-delete-columns-to-make-sorted-iii](https://github.com/godsonsphilip/Leetcode/tree/master/0960-delete-columns-to-make-sorted-iii) |
 | [3606-coupon-code-validator](https://github.com/godsonsphilip/Leetcode/tree/master/3606-coupon-code-validator) |
@@ -56,4 +57,8 @@
 |  |
 | ------- |
 | [0033-search-in-rotated-sorted-array](https://github.com/godsonsphilip/Leetcode/tree/master/0033-search-in-rotated-sorted-array) |
+## Two Pointers
+|  |
+| ------- |
+| [0031-next-permutation](https://github.com/godsonsphilip/Leetcode/tree/master/0031-next-permutation) |
 <!---LeetCode Topics End-->
